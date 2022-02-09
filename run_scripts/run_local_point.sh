@@ -1,0 +1,19 @@
+python -m examples.development.main \
+--algorithm SAC \
+--universe gym \
+--domain Reacher2D \
+--task Default-v0 \
+--exp-name sys-0.2 \
+--checkpoint-frequency 500 \
+--observe-context true \
+--env-type random \
+--predict-context true \
+--history-length 5 \
+--latent-dim 2 \
+--ensemble-size 4 \
+--cvar-alpha 0.25 \
+--threshold-iterations 25000 \
+--update-belief true \
+--num-tasks 20 \
+--local-dir "~/ray_results" \
+--trial-name-template "trial=0"
